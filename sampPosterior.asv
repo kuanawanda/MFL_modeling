@@ -1,0 +1,21 @@
+
+    % convert posterior to sampling
+    cumPost = cumsum(reshape(posterior,[],1));
+    
+    rand = .7;
+    postIdx = find(cumPost>
+    %%
+    sampPost=[];
+    
+    samples=floor(posterior*1e4);
+edges = 0:1:200;
+edges_std = 1:1:101;
+
+sampIdx = 1;
+for i = 1:length(edges)
+    for j = 1:length(edges_std)
+        sampsMean=repmat(edges(i),samples(i,j),1);
+        sampsStd=repmat(edges_std(j),samples(i,j),1);
+        %sampPost=cat(1,sampPost,sampsStd);
+    end
+end
